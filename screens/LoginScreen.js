@@ -15,11 +15,11 @@ const LoginScreen = ({ navigation }) => {
     Keyboard.dismiss();
     let isValid = true;
     if (!inputs.email) {
-      handleError("Please input email", "email");
+      handleError("vui lòng nhập email", "email");
       isValid = false;
     }
     if (!inputs.password) {
-      handleError("Please input password", "password");
+      handleError("vui lòng nhập mật khẩu", "password");
       isValid = false;
     }
     if (isValid) {
@@ -47,7 +47,7 @@ const LoginScreen = ({ navigation }) => {
           Alert.alert("Error", "Invalid Details");
         }
       } else {
-        Alert.alert("Error", "User does not exist");
+        Alert.alert("Error", "Người dùng chưa đăng ký");
       }
     }, 3000);
   };
@@ -63,13 +63,11 @@ const LoginScreen = ({ navigation }) => {
     <SafeAreaView style={{ backgroundColor: COLORS.white, flex: 1 }}>
       <Loader visible={loading} />
       <View style={{ paddingTop: 50, paddingHorizontal: 20 }}>
-        <Text
-          style={{ color: COLORS.black, fontSize: 40, fontWeight: "bold" }}
-        >
-          Log In
+        <Text style={{ color: COLORS.black, fontSize: 40, fontWeight: "bold" }}>
+          Đăng nhập
         </Text>
         <Text style={{ color: COLORS.grey, fontSize: 18, marginVertical: 10 }}>
-          Enter Your Details to Login
+          Nhập thông tin tài khoản của bạn để đăng nhập
         </Text>
         <View style={{ marginVertical: 20 }}>
           <Inputs
@@ -77,19 +75,19 @@ const LoginScreen = ({ navigation }) => {
             onFocus={() => handleError(null, "email")}
             iconName="email-outline"
             label="Email"
-            placeholder="Enter your email address"
+            placeholder="Nhập địa chỉ email của bạn"
             error={errors.email}
           />
           <Inputs
             onChangeText={(text) => handleOnchange(text, "password")}
             onFocus={() => handleError(null, "password")}
             iconName="lock-outline"
-            label="Password"
-            placeholder="Enter your password"
+            label="Mật khẩu"
+            placeholder="Nhập mật khẩu của bạn"
             error={errors.password}
             password
           />
-          <Button title="Log In" onPress={validate} />
+          <Button title="Đăng nhập" onPress={validate} />
           <Text
             onPress={() => navigation.navigate("RegisterScreen")}
             style={{
@@ -99,7 +97,7 @@ const LoginScreen = ({ navigation }) => {
               fontSize: 16,
             }}
           >
-            Don't have account ?Register
+            Không có tài khoản ? Đăng ký
           </Text>
         </View>
       </View>

@@ -29,28 +29,28 @@ const RegistrationScreen = ({ navigation }) => {
     let isValid = true;
 
     if (!inputs.email) {
-      handleError("Please input email", "email");
+      handleError("Vui lòng nhập email", "email");
       isValid = false;
     } else if (!inputs.email.match(/\S+@\S+\.\S+/)) {
-      handleError("Please input a valid email", "email");
+      handleError("Vui lòng nhập một email hợp lệ", "email");
       isValid = false;
     }
 
     if (!inputs.fullname) {
-      handleError("Please input fullname", "fullname");
+      handleError("Vui lòng nhập họ và tên", "fullname");
       isValid = false;
     }
 
     if (!inputs.phone) {
-      handleError("Please input phone number", "phone");
+      handleError("Vui lòng nhập số điện thoại", "phone");
       isValid = false;
     }
 
     if (!inputs.password) {
-      handleError("Please input password", "password");
+      handleError("Vui lòng nhập mật khẩu", "password");
       isValid = false;
     } else if (inputs.password.length < 5) {
-      handleError("Min password length of 5", "password");
+      handleError("Độ dài mật khẩu tối thiểu là 5", "password");
       isValid = false;
     }
 
@@ -84,13 +84,11 @@ const RegistrationScreen = ({ navigation }) => {
       <ScrollView
         contentContainerStyle={{ paddingTop: 50, paddingHorizontal: 20 }}
       >
-        <Text
-          style={{ color: COLORS.black, fontSize: 40, fontWeight: "bold" }}
-        >
-          Register
+        <Text style={{ color: COLORS.black, fontSize: 40, fontWeight: "bold" }}>
+          Đăng ký
         </Text>
         <Text style={{ color: COLORS.grey, fontSize: 18, marginVertical: 10 }}>
-          Enter Your Details to Register
+          Nhập thông tin chi tiết của bạn để đăng ký
         </Text>
         <View style={{ marginVertical: 20 }}>
           <Inputs
@@ -98,7 +96,7 @@ const RegistrationScreen = ({ navigation }) => {
             onFocus={() => handleError(null, "email")}
             iconName="email-outline"
             label="Email"
-            placeholder="Enter your email address"
+            placeholder="Nhập địa chỉ email của bạn"
             error={errors.email}
           />
 
@@ -106,8 +104,8 @@ const RegistrationScreen = ({ navigation }) => {
             onChangeText={(text) => handleOnchange(text, "fullname")}
             onFocus={() => handleError(null, "fullname")}
             iconName="account-outline"
-            label="Full Name"
-            placeholder="Enter your full name"
+            label="Họ và tên"
+            placeholder="Nhập tên đầy đủ của bạn"
             error={errors.fullname}
           />
 
@@ -116,20 +114,20 @@ const RegistrationScreen = ({ navigation }) => {
             onChangeText={(text) => handleOnchange(text, "phone")}
             onFocus={() => handleError(null, "phone")}
             iconName="phone-outline"
-            label="Phone Number"
-            placeholder="Enter your phone no"
+            label="Số điện thoại"
+            placeholder="Nhập số điện thoại của bạn"
             error={errors.phone}
           />
           <Inputs
             onChangeText={(text) => handleOnchange(text, "password")}
             onFocus={() => handleError(null, "password")}
             iconName="lock-outline"
-            label="Password"
-            placeholder="Enter your password"
+            label="Mật khẩu"
+            placeholder="Nhập mật khẩu của bạn"
             error={errors.password}
             password
           />
-          <Button title="Register" onPress={validate} />
+          <Button title="Đăng ký" onPress={validate} />
           <Text
             onPress={() => navigation.navigate("LoginScreen")}
             style={{
@@ -139,7 +137,7 @@ const RegistrationScreen = ({ navigation }) => {
               fontSize: 16,
             }}
           >
-            Already have account ?Login
+            Đã có tài khoản ? Đăng nhập
           </Text>
         </View>
       </ScrollView>

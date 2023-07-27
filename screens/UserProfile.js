@@ -66,7 +66,7 @@ const UserProfile = ({ navigation }) => {
               fontSize: 18,
             }}
           >
-            My Profile
+            Thông tin của tôi
           </Text>
           <TouchableOpacity>
             <View>
@@ -159,7 +159,7 @@ const UserProfile = ({ navigation }) => {
               paddingBottom: 10,
             }}
           >
-            Dashboard
+            Bảng điều khiển
           </Text>
           <View
             style={{
@@ -212,7 +212,7 @@ const UserProfile = ({ navigation }) => {
                         paddingLeft: 15,
                       }}
                     >
-                      Payments
+                      Thanh toán
                     </Text>
                   </View>
                 </View>
@@ -289,7 +289,7 @@ const UserProfile = ({ navigation }) => {
                         paddingLeft: 15,
                       }}
                     >
-                      Orders
+                      Đơn hàng đã đặt
                     </Text>
                   </View>
                 </View>
@@ -358,7 +358,7 @@ const UserProfile = ({ navigation }) => {
                         paddingLeft: 15,
                       }}
                     >
-                      Privacy
+                      Chính sách bảo  mật
                     </Text>
                   </View>
                 </View>
@@ -388,7 +388,7 @@ const UserProfile = ({ navigation }) => {
                         fontWeight: "450",
                       }}
                     >
-                      Action Needed
+                      1
                     </Text>
                     <Entypo
                       name="chevron-right"
@@ -412,7 +412,7 @@ const UserProfile = ({ navigation }) => {
               opacity: 0.5,
             }}
           >
-            My Account
+            Tài khoản
           </Text>
           <TouchableOpacity
             style={{
@@ -428,7 +428,7 @@ const UserProfile = ({ navigation }) => {
                 fontWeight: "500",
               }}
             >
-              Switch to Other Account
+              Chuyển sang tài khoản khác
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -446,7 +446,7 @@ const UserProfile = ({ navigation }) => {
               }}
               onPress={logout}
             >
-              Log Out
+              Đăng xuất
             </Text>
           </TouchableOpacity>
         </View>
